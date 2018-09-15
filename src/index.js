@@ -1,26 +1,42 @@
+function compareNumbers(a,b){
+  return a-b;
+}
+
 class Sorter {
   constructor() {
-    // your implementation
+    this.arr = []; 
   }
 
   add(element) {
-    // your implementation
+    this.arr.push(element);
   }
 
   at(index) {
-    // your implementation
+    return this.arr[index];
   }
 
   get length() {
-    // your implementation
+    return this.arr.length;
   }
 
   toArray() {
-    // your implementation
+     return this.arr;
   }
 
   sort(indices) {
-    // your implementation
+    if (indices.length===2) {
+      if (this.arr[indices[0]]>this.arr[indices[1]]){
+        this.swap(indices[0],indices[1]);
+      }
+      // this.arr.sort(compareNumbers);
+    }
+  }
+
+  swap(a, b) {
+    let temp=this.arr[b];
+    this.arr[b]=this.arr[a];
+    this.arr[a]=temp;
+
   }
 
   setComparator(compareFunction) {
