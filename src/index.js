@@ -31,6 +31,13 @@ class Sorter {
         this.swap(indices[0],indices[1]);
       }
       // this.arr.sort(compareNumbers);
+    }else if (indices.length===3){
+      if (this.comparator(this.arr[indices[0]],this.arr[indices[1]])>0){
+        this.swap(indices[0],indices[1]);}
+      if (this.comparator(this.arr[indices[1]],this.arr[indices[2]])>0){
+          this.swap(indices[1],indices[2]);}
+      if (this.comparator(this.arr[indices[0]],this.arr[indices[1]])>0){
+            this.swap(indices[0],indices[1]);}
     }
   }
 
